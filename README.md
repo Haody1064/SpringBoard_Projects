@@ -1,4 +1,4 @@
 
-# SPRINGBOARD
-# Projects & Capstons
+# SPRINGBOARD 
+# HAND-ON PROJECTS
 
