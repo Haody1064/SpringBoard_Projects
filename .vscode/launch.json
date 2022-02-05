@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\roylu\\OneDrive\\Desktop\\SpringBoard_Projects\\jasmine-testing-exercises\\calculator\\calculator.html"
+            "file": "c:\\Users\\roylu\\OneDrive\\Desktop\\SpringBoard_Projects\\js-array-foreach-map-filter\\index.html"
         }
     ]
 }
