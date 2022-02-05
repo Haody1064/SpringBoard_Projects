@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\roylu\\OneDrive\\Desktop\\SpringBoard_Projects\\jasmine-testing-exercises\\tip-pool\\index.html"
+            "file": "c:\\Users\\roylu\\OneDrive\\Desktop\\SpringBoard_Projects\\jasmine-testing-exercises\\calculator\\calculator.html"
         }
     ]
 }
