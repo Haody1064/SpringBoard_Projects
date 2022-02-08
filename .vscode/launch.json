@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C://Users//roylu//OneDrive//Desktop//SpringBoard_Projects//js-array-find-findindex//index.html",
+            "url": "C://Users//roylu//OneDrive//Desktop//SpringBoard_Projects//js-array-reduce//index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
