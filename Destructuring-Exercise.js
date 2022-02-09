@@ -122,7 +122,7 @@ function raceResults([first, second, third, ...rest]){
 //      *Destructuring
 //      *‘Enhanced’ object assignment (same key/value shortcut)
 
-// const raceResults = ([first, second, third, ...rest]) => ({first, second, third, rest})
+const raceResults = ([first, second, third, ...rest]) => ({first, second, third, rest})
 
 console.log(raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre']));
 
