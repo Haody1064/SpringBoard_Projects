@@ -28,9 +28,9 @@ instructor[favoriteNumber] = "That is my favorite!"
 var favoriteNumber = 42;
 
 var instructor = {
-  firstName: "Colt"
+  firstName: "Colt",
   [favoriteNumber]: "That is my favorite!"
-}
+};
 
 
 //Object Methods
