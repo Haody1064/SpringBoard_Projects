@@ -45,7 +45,8 @@ class Game{
     top.setAttribute('id', 'column-top');
 
 
-    //this.handleGameClick = this.handleClick.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
     top.addEventListener('click', this.handleClick);
   
     for (let x = 0; x < this.WIDTH; x++) {
@@ -73,7 +74,6 @@ class Game{
   /** findSpotForCol: given column x, return top empty y (null if filled) */
   
   findSpotForCol(x) {
-    console.log(x);
     for (let y = this.HEIGHT - 1; y >= 0; y--){
       if (!this.board[y][x]) {
         return y;
@@ -87,8 +87,9 @@ class Game{
   placeInTable(y, x) {
     const piece = document.createElement('div');
     piece.classList.add('piece');
-    piece.style.backgroundColor = this.currPlayer;
-  
+    piece.style.backgroundColor = this.currPlayer.color;
+    console.log(piece.style.backgroundColor, this.currPlayer)
+
     const spot = document.getElementById(`${y}-${x}`);
     spot.append(piece);
   }
@@ -98,7 +99,7 @@ class Game{
   endGame(msg) {
     alert(msg);
     const top = document.querySelector("#column-top");
-    top.removeEventListener("click", this.handleGameClick);
+    top.removeEventListener("click", this.handleClick);
   }
   
   /** handleClick: handle click of column top to play piece */
@@ -108,7 +109,7 @@ class Game{
     const x = +evt.target.id;
   
     // get next spot in column (if none, ignore click)
-    const y = this.findSpotForCol(x); //FIXME
+    const y = this.findSpotForCol(x); 
     if (y === null) {
       return;
     }
@@ -135,7 +136,7 @@ class Game{
   /** checkForWin: check board cell-by-cell for "does a win start here?" */
   
   checkForWin() {
-    function _win(cells) {
+    const _win = cells => {
       // Check four cells to see if they're all color of current player
       //  - cells: list of four (y, x) cells
       //  - returns true if all are legal coordinates & all match currPlayer
@@ -169,10 +170,8 @@ class Game{
 }
 
 document.getElementById('start').addEventListener("click", ()=>{
-  let p1 = new Player(document.getElementById("player1").value === null ? "red" : document.getElementById("player1").value) ;
-  let p2 = new Player(document.getElementById("player2").value === null ? "blue" : document.getElementById("player2").value) ;
+  let p1 = new Player(document.getElementById("player1").value === '' ? "red" : document.getElementById("player1").value) ;
+  let p2 = new Player(document.getElementById("player2").value === '' ? "blue" : document.getElementById("player2").value) ;
   new Game(p1, p2);
 });
-
-new Game("red", "blue");
 
