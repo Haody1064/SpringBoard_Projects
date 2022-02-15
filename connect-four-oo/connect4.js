@@ -100,6 +100,7 @@ class Game{
     alert(msg);
     const top = document.querySelector("#column-top");
     top.removeEventListener("click", this.handleClick);
+    location.reload();
   }
   
   /** handleClick: handle click of column top to play piece */
