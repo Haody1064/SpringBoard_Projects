@@ -104,11 +104,19 @@
 
 
     // 7. When you change the numbers in the three inputs on the bottom, the background color of the body should change to match whatever the three values in the inputs are.
-
+    $("input").on('keyup blur change', function () {
+      let red = $("input").eq(0).val();
+      let blue = $("input").eq(1).val();
+      let green = $("input").eq(2).val();
+      $("body").css("background-color",
+          "rgb(" + red + "," + green + "," + blue + ")");
+    });
 
 
     // 8. Add an event listener so that when you click on the image, it is removed from the DOM.
-
+    $('img').on('click', e => {
+      $(e.target).remove();
+    });
 
 
 
