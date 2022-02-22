@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C://Users//roylu//OneDrive//Desktop//SpringBoard_Projects//jquery-dom//index.html",
+            "url": "C://Users//roylu//OneDrive//Desktop//SpringBoard_Projects//ajax-giphy-party//index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
