@@ -1,3 +1,6 @@
+from unittest import result
+
+
 def convert_temp(unit_in, unit_out, temp):
     """Convert farenheit <-> celsius and return results.
 
@@ -15,7 +18,21 @@ def convert_temp(unit_in, unit_out, temp):
       convert_temp("f", "c", 212) => 100.0
     """
 
-    # YOUR CODE HERE
+    if unit_in == "c" and unit_out =="f":
+      result = temp * (9/5) +32
+      return result
+    elif unit_in == "f" and unit_out == "c":
+      result = (temp - 32) / (9/5)
+      return result
+    elif unit_in == unit_out:
+      return temp
+    else:
+        if ( unit_in == "c" or unit_in =="f"):
+          return ("Invalid unit " + unit_out)
+        if ( unit_out == "c" or unit_out =="f"):
+          return ("Invalid unit " + unit_in)
+
+
 
 
 print("c", "f", 0, convert_temp("c", "f", 0), "should be 32.0")
