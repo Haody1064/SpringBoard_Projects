@@ -10,7 +10,7 @@ def two_oldest_ages(ages):
     Even if more than one person has the same oldest age, this should return
     two *distinct* oldest ages:
 
-        >>> two_oldest_ages([1, 5, 5, 2])
+        >>> 
         (2, 5)
     """
 
@@ -21,3 +21,7 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+    uniq_ages = set(ages)
+    oldest = sorted(uniq_ages)[-2:]
+    return tuple(oldest)
+

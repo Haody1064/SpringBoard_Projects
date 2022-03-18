@@ -29,3 +29,10 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    DIFF = ord("a") -1
+
+    tot = sum((ord(c) - DIFF) for c in word.lower())
+
+    return tot % 2 == 1
+
