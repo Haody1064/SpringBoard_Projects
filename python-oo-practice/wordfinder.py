@@ -60,6 +60,6 @@ class SpecialWordFinder(WordFinder):
 
     def parse(self, dict_file):
         """Parse dict_file -> list of words, skipping blanks/comments."""
-        return [w.strip() for w in dict_file if w.strip() and not w.startwith("#")]
+        return [w.strip() for w in dict_file if w.strip() and not w.startswith("#")]
 
 
