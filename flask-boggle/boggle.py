@@ -143,3 +143,4 @@ class Boggle():
         # Sad panda.
 
         return False
+
